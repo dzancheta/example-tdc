@@ -1,4 +1,4 @@
-package com.exampletdc.exampletdc;
+package com.exampletdc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

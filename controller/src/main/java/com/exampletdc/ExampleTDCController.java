@@ -1,7 +1,8 @@
-package com.exampletdc.exampletdc.controller;
+package com.exampletdc;
 
 
-import com.exampletdc.exampletdc.facade.ClientFacade;
+import com.exampletdc.facade.ClientFacade;
+import com.exampletdc.model.ClientResponse;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -32,7 +33,7 @@ public class ExampleTDCController {
                             description = "[V1] Get client by id",
                             content = @Content(
                                     mediaType = "application/json",
-                                    schema = @Schema(implementation = String.class)
+                                    schema = @Schema(implementation = ClientResponse.class)
                             )
                     ),
                     @ApiResponse(
@@ -42,7 +43,7 @@ public class ExampleTDCController {
                     )
             }
     )
-    public Mono<String> getClientById(@PathVariable String clientId) {
+    public Mono<ClientResponse> getClientById(@PathVariable("clientId") String clientId) {
         return clientFacade.getClientById(clientId);
     }
 }
