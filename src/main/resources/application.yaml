@@ -1,0 +1,11 @@
+server:
+  port: 9000
+
+spring:
+  webflux:
+    base-path: /example-tdc
+  application:
+    name: example-tdc
+
+springdoc.swagger-ui.path: /swagger-ui.html
+
