@@ -16,7 +16,6 @@ public class ClientFacade {
         return clientService.getClientById(clientId).map(ClientMapper::toClientResponse);
     }
 
-    public Flux<ClientResponse> getAllClients() {
-        return clientService.getAllClients().map(ClientMapper::toClientResponse);
-    }
+    //example get all clients
+
 }
