@@ -13,7 +13,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 public class ClientService {
     public Mono<ClientModel> getClientById(String clientId) {
-        return Mono.just(new ClientModel("Hello World", LocalDate.of(1995,8, 27), GenderEnum.MALE));
+        return Mono.just(new ClientModel("Hello World " + clientId, LocalDate.of(1995,8, 27), GenderEnum.MALE));
     }
 
     public Flux<ClientModel> getAllClients() {
